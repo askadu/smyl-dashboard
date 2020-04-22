@@ -1,13 +1,13 @@
 import React from 'react';
-import { 
+import {
     Container,
     Row,
     Col,
     Form,
     Table,
     Button
- } 
- from 'react-bootstrap';
+}
+    from 'react-bootstrap';
 
 function Cashback() {
     return (
@@ -35,7 +35,7 @@ function Cashback() {
                     <Form.Control type="text" placeholder="cashback" />
                 </Col>
                 <Col>
-                <Button variant="secondary" type="submit">Add</Button>
+                    <Button variant="secondary" type="submit">Add</Button>
                 </Col>
             </Row>
             <Table striped bordered hover>
