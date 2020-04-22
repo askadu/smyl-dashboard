@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container from 'react-bootstrap/Container';
+import Header from './component/common/Header';
+import Footer from './component/common/Footer';
+import Login from './component/Login/Login';
+import Cashback from './component/Cashback/Cashback';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Curators from './component/Curators/Curators';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Container>
+        <Header />
+        <Switch>
+          <Route path="/cashback">
+            <Cashback />
+          </Route>
+          <Route path="/curators">
+            <Curators />
+          </Route>
+        </Switch>
+        <Footer />
+      </Container>
+    </Router>
+
   );
 }
 
